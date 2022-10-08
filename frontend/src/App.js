@@ -1,5 +1,6 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import EmpleadoList from "./components/empleadoList";
+import EmpleadoAdd from "./components/empleadoAdd";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<EmpleadoList/>}/>
+        <Route path="/add" element={<EmpleadoAdd/>}/>
       </Routes>
     </BrowserRouter>
   </div>
