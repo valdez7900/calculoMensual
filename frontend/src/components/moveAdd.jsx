@@ -36,6 +36,7 @@ const MovimientoAdd = () => {
   
     return (
       <div className="mt-20 max-w-lg mx-auto my-10 bg-white p-4 rounded-xl shadow shadow-slate-300">
+        <h1 className="text-4xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl ">Agregar <span className="text-blue-600 dark:text-blue-500">Movimiento</span></h1>
         <form onSubmit={saveEmpleado} className="my-10">
           <div className="grid grid-cols-2 gap-2">
             <div className="mb-5">

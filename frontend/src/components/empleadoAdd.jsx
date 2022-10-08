@@ -20,6 +20,8 @@ const EmpleadoAdd = () => {
   
     return (
       <div className="mt-20 max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-slate-300">
+        
+        <h1 className="text-4xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl ">Agregar <span className="text-blue-600 dark:text-blue-500">Empleado</span></h1>
         <form onSubmit={saveEmpleado} className="my-10">
           <div className="flex flex-col">
             <div className="mb-5">
@@ -60,7 +62,7 @@ const EmpleadoAdd = () => {
             <div className="mb-5">
             <label className="font-bold text-slate-700">Tipo de Empleado</label>
             <select onClick={(e) => setTipo(e.target.value)} className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
-                <option selected>Escoge Una Opcion</option>
+                <option value="selected">Escoge Una Opcion</option>
                 <option value="Interno">Interno</option>
                 <option value="Externo">Externo</option>
             </select>

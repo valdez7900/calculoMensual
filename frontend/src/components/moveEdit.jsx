@@ -38,10 +38,11 @@ const MovimientoEdit = () => {
   
     return (
       <div className="mt-20 max-w-lg mx-auto my-10 bg-white p-4 rounded-xl shadow shadow-slate-300">
+        <h1 className="text-4xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl ">Editar <span className="text-blue-600 dark:text-blue-500">Movimiento</span></h1>
         <form onSubmit={updateMovimiento} className="my-10">
           <div className="grid grid-cols-2 gap-2">
             <div className="mb-5">
-              <label className="font-bold text-slate-700">Nombe del Empleado</label>
+              <label className="font-bold text-slate-700">Nombre del Empleado</label>
               <input
                 type="text"
                 className="w-full py-3 mt-1 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow"

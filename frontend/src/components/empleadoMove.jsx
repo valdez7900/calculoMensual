@@ -33,6 +33,7 @@ const EmpleadoMove = () => {
 
   return (
       <div className="flex flex-col mt-20">
+        <h1 className="mb-4 text-4xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl ">Lista de <span className="text-blue-600 dark:text-blue-500">Movimientos</span></h1>
         <div className="w-full">
           <Link
             to={`/addMove/${id}`}
@@ -41,7 +42,7 @@ const EmpleadoMove = () => {
             Agregar Movimiento
           </Link>
           <div className="relative shadow rounded-lg mt-3">
-            <table className="w-full text-sm text-left text-gray-500">
+            <table className="mt-4 w-full text-sm text-left text-gray-500">
               <thead className="text-xs text-gray-700 uppercase bg-gray-100">
                 <tr>
                   <th className="py-3 px-1 text-center">No</th>

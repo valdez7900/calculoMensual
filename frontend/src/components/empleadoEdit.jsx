@@ -31,6 +31,7 @@ const EmpleadoEdit = () => {
   
     return (
       <div className="mt-20 max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-slate-300">
+        <h1 className="text-4xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl ">Editar <span className="text-blue-600 dark:text-blue-500">Empleado</span></h1>
         <form onSubmit={updateEmpleado} className="my-10">
           <div className="flex flex-col">
             <div className="mb-5">
