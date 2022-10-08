@@ -13,6 +13,7 @@ function App() {
         <Route path="/add" element={<EmpleadoAdd/>}/>
         <Route path="/edit/:id" element={<EmpleadoEdit/>}/>
         <Route path="/move/:id" element={<EmpleadoMove/>}/>
+        <Route path="/addMove" element={<EmpleadoMove/>}/>
       </Routes>
     </BrowserRouter>
   </div>

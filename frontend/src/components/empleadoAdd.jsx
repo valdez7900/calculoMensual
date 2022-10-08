@@ -7,7 +7,6 @@ const EmpleadoAdd = () => {
     const [rolEmpleado, setRol] = useState("");
     const [tipoEmpleado, setTipo] = useState("");
     const navigate = useNavigate();
-    console.log(rolEmpleado);
   
     const saveEmpleado = async (e) => {
       e.preventDefault();

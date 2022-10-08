@@ -40,14 +40,13 @@ export const createMovimiento= async (req, res) =>{
 }
 
 export const updateMovimiento = async (req, res) =>{
-    const {idEmpleado, cantidadEntregas} = req.body;
+    const { cantidadEntregas } = req.body;
     try {
         const movimiento = await prisma.movimiento.update({
             where:{
                 id: Number(req.params.id)
             },
             data:{
-                idEmpleado: idEmpleado,
                 cantidadEntregas: cantidadEntregas
             }
         });

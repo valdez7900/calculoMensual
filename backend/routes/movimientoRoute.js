@@ -5,7 +5,7 @@ import {
     createMovimiento,
     updateMovimiento,
     deleteMovimiento
-} from "../controllers/EmpleadoController.js";
+} from "../controllers/movimientoController.js";
 
 const router = express.Router();
 

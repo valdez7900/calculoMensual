@@ -29,3 +29,25 @@ DELETE http://localhost:5000/empleados/2
 ###
 GET http://localhost:5000/movimientos
 
+###
+POST http://localhost:5000/movimientos
+Content-Type: application/json
+
+{
+    "idEmpleado": 1,
+    "cantidadEntregas": 5
+}
+
+###
+GET http://localhost:5000/movimientos/1
+
+###
+PATCH http://localhost:5000/movimientos/2
+Content-Type: application/json
+
+{
+    "cantidadEntregas": 7
+}
+
+###
+DELETE http://localhost:5000/movimientos/2
