@@ -19,3 +19,13 @@ model Empleado {
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
 }
+
+//CREANDO ESQUEMA DE MOVIMIENTOS
+model Movimiento {
+  id               Int      @id @default(autoincrement())
+  idEmpleado       Int
+  fecha            DateTime @default(now())
+  cantidadEntregas Int
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
