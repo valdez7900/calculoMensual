@@ -60,6 +60,12 @@ const EmpleadoList = () => {
                         >
                           Eliminar
                         </button>
+                        <Link
+                          to={`/move/${empleado.id}`}
+                          className="font-medium bg-yellow-400 hover:bg-yellow-500 px-3 py-1 rounded text-black ml-1"
+                        >
+                          Movimientos
+                        </Link>
                       </td>
                     </tr>
                   ))}
