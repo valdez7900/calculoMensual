@@ -25,12 +25,13 @@ export const getMovimientoById = async (req, res) =>{
 }
 
 export const createMovimiento= async (req, res) =>{
-    const {idEmpleado, cantidadEntregas} = req.body;
+    const {idEmpleado, cantidadEntregas, cubrioA} = req.body;
     try {
         const movimiento = await prisma.movimiento.create({
             data:{
                 idEmpleado: idEmpleado,
-                cantidadEntregas: cantidadEntregas
+                cantidadEntregas: cantidadEntregas,
+                cubrioA: cubrioA
             }
         });
         res.status(201).json(movimiento);
@@ -40,14 +41,15 @@ export const createMovimiento= async (req, res) =>{
 }
 
 export const updateMovimiento = async (req, res) =>{
-    const { cantidadEntregas } = req.body;
+    const { cantidadEntregas, cubrioA } = req.body;
     try {
         const movimiento = await prisma.movimiento.update({
             where:{
                 id: Number(req.params.id)
             },
             data:{
-                cantidadEntregas: cantidadEntregas
+                cantidadEntregas: cantidadEntregas,
+                cubrioA: cubrioA
             }
         });
         res.status(200).json(movimiento);

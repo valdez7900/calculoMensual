@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import useSWR, { useSWRConfig } from "swr";
 
 const EmpleadoMove = () => {
+  const [nombreEmpleado, setNombre] = useState("");
   const { id } = useParams();
+  useEffect(() => {
+    const getEmpleadoById = async () => {
+      const response2 = await axios.get(`http://localhost:5000/empleados/${id}`);
+      setNombre(response2.data.nombreEmpleado);
+    };
+    getEmpleadoById();
+  }, [id]);
   const { mutate } = useSWRConfig();
   const fetcher = async () => {
       const response = await axios.get("http://localhost:5000/movimientos");
@@ -22,7 +30,6 @@ const EmpleadoMove = () => {
       await axios.delete(`http://localhost:5000/movimientos/${movimientoId}`);
       mutate("movimientos");
   };
-  
 
   return (
       <div className="flex flex-col mt-5">
@@ -41,6 +48,7 @@ const EmpleadoMove = () => {
                   <th className="py-3 px-6">Nombre Empleado</th>
                   <th className="py-3 px-6">Fecha Movimiento Registrado</th>
                   <th className="py-3 px-6">Cantidad de Entregas</th>
+                  <th className="py-3 px-6">Cubrio A</th>
                   <th className="py-3 px-1 text-center">Acciones</th>
                 </tr>
               </thead>
@@ -49,13 +57,14 @@ const EmpleadoMove = () => {
                    <tr className="bg-white border-b" key={movimiento.id}>
                     <td className="py-3 px-1 text-center">{index + 1}</td>
                     <td className="py-3 px-6 font-medium text-gray-900">
-                      {movimiento.idEmpleado}
+                    {nombreEmpleado}
                     </td>
                     <td className="py-3 px-6">{movimiento.fecha}</td>
                     <td className="py-3 px-6">{movimiento.cantidadEntregas}</td>
+                    <td className="py-3 px-6">{movimiento.cubrioA}</td>
                     <td className="py-3 px-1 text-center">
                       <Link
-                        to={`/edit/${movimiento.id}`}
+                        to={`/editMove/${movimiento.id}`}
                         className="font-medium bg-blue-400 hover:bg-blue-500 px-3 py-1 rounded text-white mr-1"
                       >
                         Editar

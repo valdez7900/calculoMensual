@@ -42,7 +42,7 @@ Content-Type: application/json
 GET http://localhost:5000/movimientos/1
 
 ###
-PATCH http://localhost:5000/movimientos/2
+PATCH http://localhost:5000/movimientos/1
 Content-Type: application/json
 
 {

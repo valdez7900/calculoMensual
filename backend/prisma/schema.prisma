@@ -26,6 +26,7 @@ model Movimiento {
   idEmpleado       Int
   fecha            DateTime @default(now())
   cantidadEntregas Int
+  cubrioA          String
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
 }
