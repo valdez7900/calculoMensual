@@ -37,7 +37,7 @@ const MovimientoEdit = () => {
     };
   
     return (
-      <div className="max-w-lg mx-auto my-10 bg-white p-4 rounded-xl shadow shadow-slate-300">
+      <div className="mt-20 max-w-lg mx-auto my-10 bg-white p-4 rounded-xl shadow shadow-slate-300">
         <form onSubmit={updateMovimiento} className="my-10">
           <div className="grid grid-cols-2 gap-2">
             <div className="mb-5">

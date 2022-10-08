@@ -5,11 +5,13 @@ import EmpleadoEdit from "./components/empleadoEdit";
 import EmpleadoMove from "./components/empleadoMove";
 import MoveAdd from "./components/moveAdd";
 import MoveEdit from "./components/moveEdit";
+import Navbar from "./components/navbar";
 
 function App() {
   return (
     <div className='container'>
     <BrowserRouter>
+    <Navbar />
       <Routes>
         <Route path="/" element={<EmpleadoList/>}/>
         <Route path="/add" element={<EmpleadoAdd/>}/>

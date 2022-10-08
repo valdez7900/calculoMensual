@@ -19,7 +19,7 @@ const EmpleadoAdd = () => {
     };
   
     return (
-      <div className="max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-slate-300">
+      <div className="mt-20 max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-slate-300">
         <form onSubmit={saveEmpleado} className="my-10">
           <div className="flex flex-col">
             <div className="mb-5">
