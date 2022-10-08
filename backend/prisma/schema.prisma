@@ -6,6 +6,16 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
+}
+
+//CREANDO ESQUEMA DE EMPLEADO
+model Empleado {
+  id             Int      @id @default(autoincrement())
+  nombreEmpleado String
+  rolEmpleado    String
+  tipoEmpleado   String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
 }
