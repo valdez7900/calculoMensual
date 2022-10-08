@@ -1,1 +1,27 @@
 GET http://localhost:5000/empleados
+
+###
+POST http://localhost:5000/empleados
+Content-Type: application/json
+
+{
+    "nombreEmpleado": "Luis Valdez",
+    "rolEmpleado": "Chofer",
+    "tipoEmpleado": "Interno"
+}
+
+###
+GET http://localhost:5000/empleados/1
+
+###
+PATCH http://localhost:5000/empleados/2
+Content-Type: application/json
+
+{
+    "nombreEmpleado": "LOL",
+    "rolEmpleado": "LOL",
+    "tipoEmpleado": "LOL"
+}
+
+###
+DELETE http://localhost:5000/empleados/2
