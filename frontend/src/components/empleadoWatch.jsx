@@ -24,9 +24,9 @@ const EmpleadoWatch = () => {
     const [cantidadEntregas, setEntregas] = useState("0");
     
 
-    const [mesNormal, setMesNormal] = useState("");
-    const [bonoMes, setBonoMes] = useState("");
-    const [mesConBono, setMesConBono] = useState("");
+    const [mesNormal, setMesNormal] = useState("0");
+    const [bonoMes, setBonoMes] = useState("0");
+    const [mesConBono, setMesConBono] = useState("0");
     const [bonoEntrega, setBonoEntrega] = useState("0");
     const [bonoCubrir, setBonoCubrir] = useState("0");
     const [isrRetenido, setIsrRetenido] = useState("0");
@@ -177,6 +177,17 @@ const EmpleadoWatch = () => {
               />
             </div>
 
+            <div className="mb-5">
+            <label className="font-bold text-slate-700">Bono por Cubrir (Auxiliar)</label>
+              <input
+                type="number"
+                min="0"
+                className="w-full py-3 mt-1 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow"
+                placeholder="Entregas Totales"
+                value={bonoCubrir}
+                disabled
+              />
+            </div>
 
             <div className="mb-5">
             <label className="font-bold text-slate-700">Mes con Bono</label>
@@ -234,18 +245,6 @@ const EmpleadoWatch = () => {
                 className="w-full py-3 mt-1 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow"
                 placeholder="Entregas Totales"
                 value={vale}
-                disabled
-              />
-            </div>
-
-            <div className="mb-5">
-            <label className="font-bold text-slate-700">Bono por Cubrir (Auxiliar)</label>
-              <input
-                type="number"
-                min="0"
-                className="w-full py-3 mt-1 border border-slate-200 rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow"
-                placeholder="Entregas Totales"
-                value={bonoCubrir}
                 disabled
               />
             </div>

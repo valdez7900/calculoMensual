@@ -28,6 +28,10 @@ const EmpleadoEdit = () => {
       });
       navigate("/");
     };
+
+    const handleChange = event => {
+      setRol(event.target.value);
+    };
   
     return (
       <div className="mt-20 max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-slate-300">
@@ -49,19 +53,19 @@ const EmpleadoEdit = () => {
                 <ul className="items-center w-full text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
                     <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                         <div className="flex items-center pl-3">
-                            <input id="rdChofer" type="radio" value="Chofer" checked={rolEmpleado==="Chofer"} onClick={(e) => setRol(e.target.value)} name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
+                            <input id="rdChofer" type="radio" value="Chofer" checked={rolEmpleado==="Chofer"} onChange={handleChange} name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
                             <label htmlFor="rdChofer" className="py-3 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Chofer</label>
                         </div>
                     </li>
                     <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                         <div className="flex items-center pl-3">
-                            <input id="rdCargador" type="radio" value="Cargador" checked={rolEmpleado==="Cargador"} onClick={(e) => setRol(e.target.value)} name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
+                            <input id="rdCargador" type="radio" value="Cargador" checked={rolEmpleado==="Cargador"} onChange={handleChange} name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
                             <label htmlFor="rdCargador" className="py-3 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Cargador</label>
                         </div>
                     </li>
                     <li className="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                         <div className="flex items-center pl-3">
-                            <input id="rdAuxiliar" type="radio" value="Auxiliar" checked={rolEmpleado==="Auxiliar"} onClick={(e) => setRol(e.target.value)} name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
+                            <input id="rdAuxiliar" type="radio" value="Auxiliar" checked={rolEmpleado==="Auxiliar"} onChange={handleChange} name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
                             <label htmlFor="rdAuxiliar" className="py-3 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300">Auxiliar</label>
                         </div>
                     </li>
