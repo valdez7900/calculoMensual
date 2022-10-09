@@ -1,8 +1,10 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import EmpleadoList from "./components/empleadoList";
+// import EmpleadoList from "./components/empleadoList";
+import EmpleadoList from "./components/empleadoListC";
 import EmpleadoAdd from "./components/empleadoAdd";
 import EmpleadoEdit from "./components/empleadoEdit";
-import EmpleadoMove from "./components/empleadoMove";
+// import EmpleadoMove from "./components/empleadoMove";
+import EmpleadoMove from "./components/empleadoMoveC";
 import MoveAdd from "./components/moveAdd";
 import MoveEdit from "./components/moveEdit";
 import EmpleadoWatch from "./components/empleadoWatch";
