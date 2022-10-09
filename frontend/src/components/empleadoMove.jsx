@@ -55,7 +55,7 @@ const EmpleadoMove = () => {
               </thead>
               <tbody>
                 {data.map((movimiento, index) => (
-                   <tr className="bg-white border-b" key={movimiento.id}>
+                    <tr key={movimiento.id}>
                     <td className="py-3 px-1 text-center">{index + 1}</td>
                     <td className="py-3 px-6 font-medium text-gray-900">
                     {nombreEmpleado}
