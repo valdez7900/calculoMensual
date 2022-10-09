@@ -73,7 +73,7 @@ export const deleteMovimiento = async (req, res) =>{
 
 export const getJustCargas = async (req, res) =>{
     try {
-        const movimiento = await prisma.$queryRaw`SELECT SUM(cantidadEntregas) cantidad FROM movimiento WHERE idEmpleado = ${req.params.id}`;
+        const movimiento = await prisma.$queryRaw`SELECT SUM(cantidadEntregas) cantidad, cubrioA FROM movimiento WHERE idEmpleado = ${req.params.id}`;
         res.status(200).json(movimiento);
     } catch (error) {
         res.status(400).json({msg: error.message});

@@ -5,6 +5,7 @@ import EmpleadoEdit from "./components/empleadoEdit";
 import EmpleadoMove from "./components/empleadoMove";
 import MoveAdd from "./components/moveAdd";
 import MoveEdit from "./components/moveEdit";
+import EmpleadoWatch from "./components/empleadoWatch";
 import Navbar from "./components/navbar";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/move/:id" element={<EmpleadoMove/>}/>
         <Route path="/addMove/:id" element={<MoveAdd/>}/>
         <Route path="/editMove/:id" element={<MoveEdit/>}/>
+        <Route path="/watch/:id" element={<EmpleadoWatch/>}/>
       </Routes>
     </BrowserRouter>
   </div>

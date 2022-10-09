@@ -8,7 +8,7 @@ const MovimientoEdit = () => {
     const [nombreEmpleado, setNombre] = useState("");
     const [rolEmpleado, setRol] = useState("");
     const [tipoEmpleado, setTipo] = useState("");
-    const [cubrio, setCubrio] = useState("");
+    const [cubrio, setCubrio] = useState("NA");
     const [cantidadEntregas, setEntregas] = useState("");
     const navigate = useNavigate();
     const { id } = useParams();
@@ -17,7 +17,9 @@ const MovimientoEdit = () => {
       const getMovimientoById = async () => {
         const response = await axios.get(`http://localhost:5000/movimientos/${id}`);
         setIdEmpleado(response.data.idEmpleado);
-        setCubrio(response.data.cubrioA);
+        if (response.data.cubrioA !== "") {
+          setCubrio(response.data.cubrioA);
+        }
         setEntregas(response.data.cantidadEntregas);
         const response2 = await axios.get(`http://localhost:5000/empleados/${idEmpleado}`);
         setNombre(response2.data.nombreEmpleado);

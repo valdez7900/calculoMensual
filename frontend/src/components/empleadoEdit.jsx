@@ -3,9 +3,9 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
 const EmpleadoEdit = () => {
-    const [nombreEmpleado, setNombre] = useState("");
-    const [rolEmpleado, setRol] = useState("");
-    const [tipoEmpleado, setTipo] = useState("");
+    const [nombreEmpleado, setNombre] = useState("NA");
+    const [rolEmpleado, setRol] = useState("NA");
+    const [tipoEmpleado, setTipo] = useState("NA");
     const navigate = useNavigate();
     const { id } = useParams();
   
@@ -70,8 +70,8 @@ const EmpleadoEdit = () => {
             
             <div className="mb-5">
             <label className="font-bold text-slate-700">Tipo de Empleado</label>
-            <select value={tipoEmpleado} onClick={(e) => setTipo(e.target.value)} className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
-                <option selected>Escoge Una Opcion</option>
+            <select value={tipoEmpleado} onChange={(e) => setTipo(e.target.value)} className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                <option value="selected">Escoge Una Opcion</option>
                 <option value="Interno">Interno</option>
                 <option value="Externo">Externo</option>
             </select>
