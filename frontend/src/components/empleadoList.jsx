@@ -1,9 +1,27 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt, faEdit } from "@fortawesome/free-regular-svg-icons"
+import { faTruck, faEye } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "react-router-dom";
 import axios from "axios";
 import useSWR, { useSWRConfig } from "swr";
 
+
 const EmpleadoList = () => {
+
+    const sueldoBase = 30;
+    const jornadaLaboral = 8;
+
+    const porEntrega = 5;
+    
+    const bonoChoferes = 10;
+    const bonoCargadores = 5;
+
+    const isr = 0.09;
+    const isrAdicional = 0.12;
+
+    const vales = 0.04;
+    
     const { mutate } = useSWRConfig();
     const fetcher = async () => {
         const response = await axios.get("http://localhost:5000/empleados");
@@ -17,6 +35,10 @@ const EmpleadoList = () => {
         await axios.delete(`http://localhost:5000/empleados/${empleadoId}`);
         mutate("empleados");
     };
+
+    function calculoMensual(props) {
+
+    }
 
     return (
         <div className="flex flex-col mt-20">
@@ -53,19 +75,25 @@ const EmpleadoList = () => {
                           to={`/edit/${empleado.id}`}
                           className="font-medium bg-blue-400 hover:bg-blue-500 px-3 py-1 rounded text-white mr-1"
                         >
-                          Editar
+                          <FontAwesomeIcon icon={faEdit}/>
                         </Link>
                         <button
                           onClick={() => deleteProduct(empleado.id)}
                           className="font-medium bg-red-400 hover:bg-red-500 px-3 py-1 rounded text-white"
                         >
-                          Eliminar
+                          <FontAwesomeIcon icon={faTrashAlt}/>
                         </button>
                         <Link
                           to={`/move/${empleado.id}`}
                           className="font-medium bg-yellow-400 hover:bg-yellow-500 px-3 py-1 rounded text-black ml-1"
                         >
-                          Movimientos
+                          <FontAwesomeIcon icon={faTruck}/>
+                        </Link>
+                        <Link
+                          to={`/move/${empleado.id}`}
+                          className="font-medium bg-green-400 hover:bg-green-500 px-3 py-1 rounded text-black ml-1"
+                        >
+                         <FontAwesomeIcon icon={faEye}/>
                         </Link>
                       </td>
                     </tr>
