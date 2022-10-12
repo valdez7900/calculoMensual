@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+const URL_EMPLEADOS = process.env.REACT_APP_URL_EMPLEADO;
+const URL_MOVIMIENTOS = process.env.REACT_APP_URL_MOVIMIENTOS;
 
 const EmpleadoWatch = () => {
     const sueldoBase = 30;
@@ -40,14 +42,14 @@ const EmpleadoWatch = () => {
   
     useEffect(() => {
       const getEmpleadoById = async () => {
-        const response = await axios.get(`http://localhost:5000/empleados/${id}`);
+        const response = await axios.get(URL_EMPLEADOS + id);
         setNombre(response.data.nombreEmpleado);
         setRol(response.data.rolEmpleado);
         setTipo(response.data.tipoEmpleado);
       };
 
       const getCargasById = async () => {
-        const response = await axios.get(`http://localhost:5000/movimientoss/${id}`);
+        const response = await axios.get(URL_MOVIMIENTOS + id);
         setEntregas(response.data[0].cantidad);
         setCubrioA(response.data[0].cubrioA);
       };
